@@ -78,6 +78,20 @@ categories: Notes
 				- those entities why can not be measured and they does not have further attribute, like transaction No.
 				- these entitites has one on one relation with fact, like order no,transaction no.
 				- these Dimension sits on fact table with each fact.
+
+		5. Slowly Changing Dimension
+		 	a.	Type 1 Overwrite the value
+				-	It will replace older value with new one , so it will not store historical data
+				-	Use it for spelling correction
+				-	sale [surrogateKey , storeID, StoreName, EffectiveDate]
+			b.	Type 2 preserve history using flag
+
+				-	Which one is current record which one is older
+					- sale [surrogateKey , storeID, StoreName, EffectiveDate, ExpiryDate]
+					- sale [surrogateKey , storeID, StoreName, EffectiveDate, Active]
+			c. Type 3 preserve Partial History 
+				-  sale [surrogateKey , storeID, StoreName, original_EffectiveDate, current_effectiveDate]
+
 				
 > Challange 
 	- Structure of dimension table 

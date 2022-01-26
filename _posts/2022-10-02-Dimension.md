@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Understanding Dimension"
+title:  "More on Dimension"
 date:   2021-10-02 09:04:08 +0530
-categories: Notes
-permalink: '/datawarehouse/dimension'
+categories: datawarehouse
+permalink: /:categories/:title
 ---
 - challange 
 	> from available data set which entity is fact and which entity is dimesion 

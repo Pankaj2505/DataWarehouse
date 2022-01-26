@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "DimensionModelling"
+title:  "Dimension Modelling"
 date:   2021-10-02 09:04:08 +0530
-categories: Notes
-permalink: '/datawarehouse/dimesionmodelling'
+categories: datawarehouse
+permalink: /:categories/:title
 ---
 
 ### Topic to Cover 

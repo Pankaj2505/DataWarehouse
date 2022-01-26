@@ -2,8 +2,8 @@
 layout: post
 title:  "Objective of DataWarehouse"
 date:   2021-10-04 09:04:08 +0530
-categories: Notes
-permalink: '/datawarehouse/objective'
+categories: datawarehouse
+permalink: /:categories/:title
 ---
 
 ### Topic to Cover

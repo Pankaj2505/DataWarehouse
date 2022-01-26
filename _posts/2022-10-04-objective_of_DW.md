@@ -3,66 +3,87 @@ layout: post
 title:  "Objective of DataWarehouse"
 date:   2021-10-04 09:04:08 +0530
 categories: Notes
+permalink: '/datawarehouse/objective'
 ---
 
 ### Topic to Cover
+- Architecture of Datawarehouse
+- How to store operational data
+- Centralize data warehouse
+- Enterprise Data warehouse
 
-Architecture of Datawarehouse
-	Centralize data warehouse-Having a single database to support BI 
-	Data Marts – small scale DW
-	Component based warehouse-Multiple components like DW and data marts work together. And there are many DW and DM.
-	Cubes- Special type of Database
-	Operational data Store
-	Layers
-	Staging layer
-	Persistent (Keep older data)
-	Non – Persistent (Delete Older data)
-Centralize data warehouse
-	Only one database is needed, which fetch data from multiple sources
-	One stop shopping, users uses single database for task like BI , report creation 
+#### Architecture of Datawarehouse
+- Centralize data warehouse
+    -Having a single database to support BI 
+- Data Marts
+     – small scale DW
+- Component based warehouse
+    -Multiple components like DW and data marts work together. And there are many DW and DM.
+- Cubes
+    - Special type of Database
 
-Challenges
-Technology – RDB face challenges with Data Volume
-Design Engineering and data model
-Internal Organization, Internal personal challenges 
+### How to Store Operational Data
+    - OLAP
+        - This store the analytical data
+        - we copy data from transactional system to OLAP server to run analytical and reporting operations
+    - OLTP
+        - It stores all the transactional data
+        - for example storing pos data at the time of transaction happening
+    - Layers  
+        - Staging layer  
+            - Persistent (Keep older data)  
+            - Non – Persistent (Delete Older data)  
 
 
-	Data Warehouse
-	Centralize
-Default Option 
-One Stop Shopping
-Modern Technology
-It requires High Degree of Inter Organizational Co-operation (no body wants to share data)
-High data Governance
-Ripple Effect – small change will affect other environment.
+### Centralize data warehouse
+    - Only one database is needed, which fetch data from multiple sources
+    - One stop shopping, users uses single database for task like BI , report creation 
 
-	EDW
-Enterprise Data warehouse
-•	Relational
-•	Special Database (Cube)
-	Data Lake
-Here we can use technology like Hadoop , 
-•	Hadoop
-•	Special Database (Cube)
-•	Other (AWS S3, Google)
-	Component-Based 
-Decomposition- Divide Data into multiple components, we can isolate portion of data. This will helps to make some Datawarehouse private.
-Mix and Match Decomposition- we can set up new DW with latest technology , we can use new BI technologies on Newly set up DW.
-Bolt Together Component
-Overcome Org challenges (data Privacy, create a DW and use its data for building another DW)
-Often Inconsistent Data
-Difficult to Cross integrate the components .its difficult to have data mart from multiple Datawarehouse, as data will be inconsistent
-	Architected
-•	DW+DM
-•	Dependent DM (CIF) corporation integration factory(how has access to which part of data warehouse /Data mart)
-•	Front End DM- Data will be moving from DM to DW
-•	DM Only
-•	DW Bus
-	Non-Architected
-•	Federated EDW- all DataMart are part of a Datawarehouse
-Including Multidimensional database or Cube in DW
-Just like RDBMS is a source for DW, Cube can also be a data source.
-What is a cube?
+    - Challenges with Relational data warehouse
+        - Technology
+        – RDB face challenges with Data Volume
+        - Design Engineering and data model
+        - Internal Organization, Internal personal challenges 
+
+
+    - solution Data Warehouse
+        - Centralize
+        - Default Option 
+        - One Stop Shopping
+        - Modern Technology
+        - It requires High Degree of Inter Organizational Co-operation (no body wants to share data)
+        - High data Governance
+        - Ripple Effect – small change will affect other environment.
+
+        -EDW Enterprise Data warehouse
+            - Relational
+            - Special Database (Cube)
+        - Data Lake
+            - Here we can use technology like Hadoop
+            - Special Database (Cube)
+        - Other (AWS S3, Google)
+### Component-Based 
+    -Decomposition
+        - Divide Data into multiple components, we can isolate portion of data. This will helps to make some Datawarehouse private.
+
+    - Mix and Match Decomposition
+    - we can set up new DW with latest technology , we can use new BI technologies on Newly set up DW.
+    - Bolt Together Component
+    - Overcome Org challenges (data Privacy, create a DW and use its data for building another DW)
+    - Often Inconsistent Data
+    - Difficult to Cross integrate the components .its difficult to have data mart from multiple Datawarehouse, as data will be inconsistent
+###	Architected
+    - DW+DM
+    - Dependent DM (CIF) corporation integration factory(how has access to which part of data warehouse /Data mart)
+    -Front End DM- Data will be moving from DM to DW
+    - DM Only
+    - DW Bus
+###	Non-Architected
+    - Federated EDW- all DataMart are part of a Datawarehouse
+    - Including Multidimensional database or Cube in DW
+    - Just like RDBMS is a source for DW, Cube can also be a data source.
+
+### What is a cube?
 •	It is not a RDBMS
 •	It follows the idea of dimensionality
 •	Alternative of DW, here we have facts and for context we have dimensionality.

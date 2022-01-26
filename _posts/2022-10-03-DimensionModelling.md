@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Understanding Dimension"
+title:  "DimensionModelling"
 date:   2021-10-02 09:04:08 +0530
 categories: Notes
+permalink: '/datawarehouse/dimesionmodelling'
 ---
 
 ### Topic to Cover 
